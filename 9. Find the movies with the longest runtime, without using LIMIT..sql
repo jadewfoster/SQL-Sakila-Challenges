@@ -1,4 +1,9 @@
 -- Find the movies with the longest runtime, without using LIMIT.
 
+-- Using nested query to show movies with the longest runtime (the max value of length)
+
 SELECT * FROM sakila.film
-ORDER BY length DESC LIMIT 10
+WHERE length = (
+	SELECT MAX(length)
+    FROM sakila.film
+    );

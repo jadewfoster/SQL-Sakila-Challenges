@@ -1,8 +1,9 @@
 -- Using HAVING, reverse-alphabetically list the last names that are not repeated.
 
-SELECT last_name, COUNT(last_name) AS number_of_times_repeated
+-- Changed to a DISTINCT count
+
+SELECT last_name
 FROM sakila.actor
 GROUP BY last_name
-HAVING number_of_times_repeated = 1
-ORDER BY last_name DESC
-;
+HAVING COUNT(DISTINCT last_name) = 1
+ORDER BY last_name DESC;
