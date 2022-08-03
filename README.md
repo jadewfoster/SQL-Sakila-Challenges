@@ -1,6 +1,6 @@
 # SQL-Sakila-Challenges
 
-List all actors.
+List all actors. \n
 Find the surname of the actor with the forename 'John'.
 Find all actors with surname 'Neeson'.
 Find all actors with ID numbers divisible by 10.
